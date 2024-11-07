@@ -1,0 +1,11 @@
+D:\CT291 - LTUD\QL_NhaThuoc\QL_NhaThuoc\obj\Debug\QL_NhaThuoc.csproj.AssemblyReference.cache
+D:\CT291 - LTUD\QL_NhaThuoc\QL_NhaThuoc\obj\Debug\QL_NhaThuoc.FormHD.resources
+D:\CT291 - LTUD\QL_NhaThuoc\QL_NhaThuoc\obj\Debug\QL_NhaThuoc.FormToathuoc.resources
+D:\CT291 - LTUD\QL_NhaThuoc\QL_NhaThuoc\obj\Debug\QL_NhaThuoc.Properties.Resources.resources
+D:\CT291 - LTUD\QL_NhaThuoc\QL_NhaThuoc\obj\Debug\QL_NhaThuoc.csproj.GenerateResource.cache
+D:\CT291 - LTUD\QL_NhaThuoc\QL_NhaThuoc\obj\Debug\QL_NhaThuoc.csproj.CoreCompileInputs.cache
+D:\CT291 - LTUD\QL_NhaThuoc\QL_NhaThuoc\bin\Debug\QL_NhaThuoc.exe.config
+D:\CT291 - LTUD\QL_NhaThuoc\QL_NhaThuoc\bin\Debug\QL_NhaThuoc.exe
+D:\CT291 - LTUD\QL_NhaThuoc\QL_NhaThuoc\bin\Debug\QL_NhaThuoc.pdb
+D:\CT291 - LTUD\QL_NhaThuoc\QL_NhaThuoc\obj\Debug\QL_NhaThuoc.exe
+D:\CT291 - LTUD\QL_NhaThuoc\QL_NhaThuoc\obj\Debug\QL_NhaThuoc.pdb
