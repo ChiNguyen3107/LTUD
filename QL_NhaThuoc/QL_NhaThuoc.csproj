@@ -64,25 +64,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormHD.cs">
+    <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormHD.Designer.cs">
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrol\FormHD.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrol\FormHD.Designer.cs">
       <DependentUpon>FormHD.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormToathuoc.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Usercontrol\FormToathuoc.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="FormToathuoc.Designer.cs">
+    <Compile Include="Usercontrol\FormToathuoc.Designer.cs">
       <DependentUpon>FormToathuoc.cs</DependentUpon>
     </Compile>
     <Compile Include="nguyen.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormHD.resx">
+    <Compile Include="Usercontrol_Custome\RoundedButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrol\FormHD.resx">
       <DependentUpon>FormHD.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormToathuoc.resx">
+    <EmbeddedResource Include="Usercontrol\FormToathuoc.resx">
       <DependentUpon>FormToathuoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -119,5 +131,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -16,7 +16,7 @@ namespace QL_NhaThuoc
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormToathuoc());
+            Application.Run(new Dashboard());
         }
     }
 }

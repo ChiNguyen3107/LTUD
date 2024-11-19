@@ -6,7 +6,7 @@ namespace QL_NhaThuoc
     {
         public SqlConnection ketnoi()
         {
-            string chuoiketnoi = "Server=DESKTOP-QART6FI;Database=QuanLyThuoc;Integrated Security=True";
+            string chuoiketnoi = "Server=MSI;Database=QuanLyThuoc;Integrated Security=True";
             SqlConnection conn = new SqlConnection(chuoiketnoi);
             conn.Open();
             return conn;
