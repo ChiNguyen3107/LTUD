@@ -21,3 +21,6 @@ D:\CTU\Lâp trình ứng dụng\QL_BanThuoc\LTUD\QL_NhaThuoc\obj\Debug\QL_NhaThu
 D:\CTU\Lâp trình ứng dụng\QL_BanThuoc\LTUD\QL_NhaThuoc\obj\Debug\QL_NhaThuoc.exe
 D:\CTU\Lâp trình ứng dụng\QL_BanThuoc\LTUD\QL_NhaThuoc\obj\Debug\QL_NhaThuoc.pdb
 D:\CTU\Lâp trình ứng dụng\QL_BanThuoc\LTUD\QL_NhaThuoc\obj\Debug\QL_NhaThuoc.Dashboard.resources
+D:\CTU\Lâp trình ứng dụng\QL_BanThuoc\LTUD\QL_NhaThuoc\obj\Debug\QL_NhaThuoc.Usercontrol_Custome.RoundedTextbox.resources
+D:\CTU\Lâp trình ứng dụng\QL_BanThuoc\LTUD\QL_NhaThuoc\obj\Debug\QL_NhaThuoc.Usercontrol.FormNV.resources
+D:\CTU\Lâp trình ứng dụng\QL_BanThuoc\LTUD\QL_NhaThuoc\obj\Debug\QL_NhaThuoc.Usercontrol.FormKH.resources
