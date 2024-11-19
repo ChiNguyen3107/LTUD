@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace QL_NhaThuoc
 {
-    public partial class FormHD : Form
+    public partial class FormHD : UserControl
     {
         public FormHD()
         {
@@ -194,12 +194,12 @@ namespace QL_NhaThuoc
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        /*private void Form1_Load(object sender, EventArgs e)
         {
             textBox3.Text = GenerateInvoiceID();
             textBox3.ReadOnly = true;
             LoadComboBox();
-        }
+        }*/
 
         private void LoadComboBox()
         {
@@ -314,7 +314,31 @@ namespace QL_NhaThuoc
         {
         }
 
+        private void FormHD_Load(object sender, EventArgs e)
+        {
+            textBox3.Text = GenerateInvoiceID();
+            textBox3.ReadOnly = true;
+            LoadComboBox();
+        }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

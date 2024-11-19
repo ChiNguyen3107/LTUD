@@ -9,3 +9,15 @@ D:\CT291 - LTUD\QL_NhaThuoc\QL_NhaThuoc\bin\Debug\QL_NhaThuoc.exe
 D:\CT291 - LTUD\QL_NhaThuoc\QL_NhaThuoc\bin\Debug\QL_NhaThuoc.pdb
 D:\CT291 - LTUD\QL_NhaThuoc\QL_NhaThuoc\obj\Debug\QL_NhaThuoc.exe
 D:\CT291 - LTUD\QL_NhaThuoc\QL_NhaThuoc\obj\Debug\QL_NhaThuoc.pdb
+D:\CTU\Lâp trình ứng dụng\QL_BanThuoc\LTUD\QL_NhaThuoc\bin\Debug\QL_NhaThuoc.exe.config
+D:\CTU\Lâp trình ứng dụng\QL_BanThuoc\LTUD\QL_NhaThuoc\bin\Debug\QL_NhaThuoc.exe
+D:\CTU\Lâp trình ứng dụng\QL_BanThuoc\LTUD\QL_NhaThuoc\bin\Debug\QL_NhaThuoc.pdb
+D:\CTU\Lâp trình ứng dụng\QL_BanThuoc\LTUD\QL_NhaThuoc\obj\Debug\QL_NhaThuoc.csproj.AssemblyReference.cache
+D:\CTU\Lâp trình ứng dụng\QL_BanThuoc\LTUD\QL_NhaThuoc\obj\Debug\QL_NhaThuoc.FormHD.resources
+D:\CTU\Lâp trình ứng dụng\QL_BanThuoc\LTUD\QL_NhaThuoc\obj\Debug\QL_NhaThuoc.FormToathuoc.resources
+D:\CTU\Lâp trình ứng dụng\QL_BanThuoc\LTUD\QL_NhaThuoc\obj\Debug\QL_NhaThuoc.Properties.Resources.resources
+D:\CTU\Lâp trình ứng dụng\QL_BanThuoc\LTUD\QL_NhaThuoc\obj\Debug\QL_NhaThuoc.csproj.GenerateResource.cache
+D:\CTU\Lâp trình ứng dụng\QL_BanThuoc\LTUD\QL_NhaThuoc\obj\Debug\QL_NhaThuoc.csproj.CoreCompileInputs.cache
+D:\CTU\Lâp trình ứng dụng\QL_BanThuoc\LTUD\QL_NhaThuoc\obj\Debug\QL_NhaThuoc.exe
+D:\CTU\Lâp trình ứng dụng\QL_BanThuoc\LTUD\QL_NhaThuoc\obj\Debug\QL_NhaThuoc.pdb
+D:\CTU\Lâp trình ứng dụng\QL_BanThuoc\LTUD\QL_NhaThuoc\obj\Debug\QL_NhaThuoc.Dashboard.resources

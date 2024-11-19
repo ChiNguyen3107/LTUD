@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace QL_NhaThuoc
 {
-    public partial class FormToathuoc : Form
+    public partial class FormToathuoc : UserControl
     {
         private nguyen db = new nguyen(); // Đối tượng để kết nối cơ sở dữ liệu
         public FormToathuoc()
@@ -37,11 +37,6 @@ namespace QL_NhaThuoc
 
         }
 
-        private void FormToathuoc_Load(object sender, EventArgs e)
-        {
-            // Gọi hàm tải dữ liệu vào ListView khi form được load
-            LoadDataToListView();
-        }
 
         private void LoadDataToListView()
         {
@@ -259,9 +254,17 @@ namespace QL_NhaThuoc
             formHD.LoadDataFromToaThuoc(dataTable);
 
             // Hiển thị formHD
-            formHD.Show();
+            if (!this.Controls.Contains(formHD))
+            {
+                this.Controls.Add(formHD);
+                formHD.Dock = DockStyle.Fill; // Tùy chỉnh dock
+            }
+            formHD.BringToFront();
         }
 
-
+        private void FormToathuoc_Load(object sender, EventArgs e)
+        {
+            LoadDataToListView();
+        }
     }
 }
