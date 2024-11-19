@@ -16,5 +16,18 @@ namespace QL_NhaThuoc
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            formNV1.Visible = true;
+            formToathuoc1.Visible = false;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            formNV1.Visible = false;
+            formToathuoc1.Visible = true;
+
+        }
     }
 }
