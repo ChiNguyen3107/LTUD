@@ -40,6 +40,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(230, 15);
             this.textBox1.TabIndex = 1;
+            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
             // 
             // RoundedTextbox
             // 
@@ -49,6 +50,8 @@
             this.Name = "RoundedTextbox";
             this.Padding = new System.Windows.Forms.Padding(10, 7, 10, 3);
             this.Size = new System.Drawing.Size(250, 25);
+            this.Enter += new System.EventHandler(this.RoundedTextbox_Enter_1);
+            this.Leave += new System.EventHandler(this.RoundedTextbox_Leave);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -12,6 +12,8 @@ using System.Windows.Forms;
 namespace QL_NhaThuoc.Usercontrol_Custome
 {
     [DefaultEvent("_TextChanged")]
+
+
     public partial class RoundedTextbox : UserControl
     {
         private Color BorderColor = Color.MediumSlateBlue;
@@ -21,12 +23,17 @@ namespace QL_NhaThuoc.Usercontrol_Custome
         private bool isPlaceholder = false;
         private Color PlaceholderColor = Color.White;
 
+        public event KeyPressEventHandler _KeyPress;
 
 
         public RoundedTextbox()
         {
             InitializeComponent();
             SetPlaceholder();
+            textBox1.KeyPress += (s, e) =>
+            {
+                _KeyPress?.Invoke(this, e);
+            };
         }
 
         //Event
@@ -192,13 +199,20 @@ namespace QL_NhaThuoc.Usercontrol_Custome
 
 
 
-        private void RoundedTextbox_Enter(object sender, EventArgs e)
+   
+
+        private void textBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RoundedTextbox_Enter_1(object sender, EventArgs e)
         {
             this.Invalidate();
             RemovePlaceholder();
         }
 
-        private void RoundedTextbox_Leave_1(object sender, EventArgs e)
+        private void RoundedTextbox_Leave(object sender, EventArgs e)
         {
             this.Invalidate();
             SetPlaceholder();

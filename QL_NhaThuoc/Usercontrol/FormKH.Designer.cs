@@ -28,18 +28,354 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_Sex = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.roundedButton5 = new QL_NhaThuoc.Usercontrol_Custome.RoundedButton();
+            this.roundedTextbox5 = new QL_NhaThuoc.Usercontrol_Custome.RoundedTextbox();
+            this.Clear_kh = new QL_NhaThuoc.Usercontrol_Custome.RoundedButton();
+            this.Update_kh = new QL_NhaThuoc.Usercontrol_Custome.RoundedButton();
+            this.roundedTextbox3 = new QL_NhaThuoc.Usercontrol_Custome.RoundedTextbox();
+            this.roundedTextbox2 = new QL_NhaThuoc.Usercontrol_Custome.RoundedTextbox();
+            this.roundedTextbox1 = new QL_NhaThuoc.Usercontrol_Custome.RoundedTextbox();
+            this.roundedButton1 = new QL_NhaThuoc.Usercontrol_Custome.RoundedButton();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(81)))), ((int)(((byte)(162)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(81)))), ((int)(((byte)(162)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column_ID,
+            this.Column_Name,
+            this.Column_Sex,
+            this.Column_Phone});
+            this.dataGridView1.EnableHeadersVisualStyles = false;
+            this.dataGridView1.Location = new System.Drawing.Point(29, 469);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
+            this.dataGridView1.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView1.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.dataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(112)))), ((int)(((byte)(229)))));
+            this.dataGridView1.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(1084, 234);
+            this.dataGridView1.TabIndex = 9;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            // 
+            // Column_ID
+            // 
+            this.Column_ID.HeaderText = "Mã khách hàng";
+            this.Column_ID.MinimumWidth = 6;
+            this.Column_ID.Name = "Column_ID";
+            // 
+            // Column_Name
+            // 
+            this.Column_Name.HeaderText = "Tên khách hàng";
+            this.Column_Name.MinimumWidth = 6;
+            this.Column_Name.Name = "Column_Name";
+            // 
+            // Column_Sex
+            // 
+            this.Column_Sex.HeaderText = "Giới tính";
+            this.Column_Sex.MinimumWidth = 6;
+            this.Column_Sex.Name = "Column_Sex";
+            // 
+            // Column_Phone
+            // 
+            this.Column_Phone.HeaderText = "SĐT";
+            this.Column_Phone.MinimumWidth = 6;
+            this.Column_Phone.Name = "Column_Phone";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.Clear_kh);
+            this.groupBox1.Controls.Add(this.Update_kh);
+            this.groupBox1.Controls.Add(this.roundedTextbox3);
+            this.groupBox1.Controls.Add(this.roundedTextbox2);
+            this.groupBox1.Controls.Add(this.roundedTextbox1);
+            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(29, 16);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1084, 398);
+            this.groupBox1.TabIndex = 8;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Thông tin khách hàng";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.White;
+            this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
+            this.comboBox1.Location = new System.Drawing.Point(164, 147);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(193, 28);
+            this.comboBox1.TabIndex = 3;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(19, 150);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(79, 20);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Giới tính";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(18, 203);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(112, 20);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Số điện thoại";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(18, 98);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(133, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Tên khách hàng";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(18, 46);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(130, 20);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Mã khách hàng";
+            // 
+            // roundedButton5
+            // 
+            this.roundedButton5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(40)))), ((int)(((byte)(81)))));
+            this.roundedButton5.BorderRadius = 20;
+            this.roundedButton5.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(40)))), ((int)(((byte)(81)))));
+            this.roundedButton5.ButtonText = "Xóa khách hàng";
+            this.roundedButton5.FlatAppearance.BorderSize = 0;
+            this.roundedButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton5.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundedButton5.HoverButtonColor = System.Drawing.Color.CornflowerBlue;
+            this.roundedButton5.Icon = null;
+            this.roundedButton5.Location = new System.Drawing.Point(962, 420);
+            this.roundedButton5.Name = "roundedButton5";
+            this.roundedButton5.Size = new System.Drawing.Size(151, 32);
+            this.roundedButton5.TabIndex = 11;
+            this.roundedButton5.TextColor = System.Drawing.Color.White;
+            this.roundedButton5.UseVisualStyleBackColor = true;
+            // 
+            // roundedTextbox5
+            // 
+            this.roundedTextbox5.BackColor = System.Drawing.Color.White;
+            this.roundedTextbox5.BorderColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(94)))), ((int)(((byte)(215)))));
+            this.roundedTextbox5.BorderSize1 = 1;
+            this.roundedTextbox5.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundedTextbox5.IsPlaceholder = true;
+            this.roundedTextbox5.Location = new System.Drawing.Point(29, 422);
+            this.roundedTextbox5.Multiline = false;
+            this.roundedTextbox5.Name = "roundedTextbox5";
+            this.roundedTextbox5.Padding = new System.Windows.Forms.Padding(10, 7, 10, 3);
+            this.roundedTextbox5.PasswordChar = false;
+            this.roundedTextbox5.PlaceholderColor1 = System.Drawing.Color.Black;
+            this.roundedTextbox5.PlaceholderText1 = "Tìm kiếm";
+            this.roundedTextbox5.Size = new System.Drawing.Size(227, 30);
+            this.roundedTextbox5.TabIndex = 10;
+            this.roundedTextbox5.Texts = "";
+            this.roundedTextbox5.UnderLineStyle1 = true;
+            // 
+            // Clear_kh
+            // 
+            this.Clear_kh.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(40)))), ((int)(((byte)(81)))));
+            this.Clear_kh.BorderRadius = 20;
+            this.Clear_kh.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(40)))), ((int)(((byte)(81)))));
+            this.Clear_kh.ButtonText = "Đặt lại";
+            this.Clear_kh.FlatAppearance.BorderSize = 0;
+            this.Clear_kh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Clear_kh.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Clear_kh.HoverButtonColor = System.Drawing.Color.CornflowerBlue;
+            this.Clear_kh.Icon = null;
+            this.Clear_kh.Location = new System.Drawing.Point(198, 264);
+            this.Clear_kh.Name = "Clear_kh";
+            this.Clear_kh.Size = new System.Drawing.Size(128, 32);
+            this.Clear_kh.TabIndex = 4;
+            this.Clear_kh.TextColor = System.Drawing.Color.White;
+            this.Clear_kh.UseVisualStyleBackColor = true;
+            this.Clear_kh.Click += new System.EventHandler(this.Clear_kh_Click);
+            // 
+            // Update_kh
+            // 
+            this.Update_kh.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(40)))), ((int)(((byte)(81)))));
+            this.Update_kh.BorderRadius = 20;
+            this.Update_kh.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(40)))), ((int)(((byte)(81)))));
+            this.Update_kh.ButtonText = "Cập nhật";
+            this.Update_kh.FlatAppearance.BorderSize = 0;
+            this.Update_kh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Update_kh.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Update_kh.HoverButtonColor = System.Drawing.Color.CornflowerBlue;
+            this.Update_kh.Icon = null;
+            this.Update_kh.Location = new System.Drawing.Point(23, 264);
+            this.Update_kh.Name = "Update_kh";
+            this.Update_kh.Size = new System.Drawing.Size(135, 32);
+            this.Update_kh.TabIndex = 4;
+            this.Update_kh.TextColor = System.Drawing.Color.White;
+            this.Update_kh.UseVisualStyleBackColor = true;
+            this.Update_kh.Click += new System.EventHandler(this.Update_kh_CLick);
+            // 
+            // roundedTextbox3
+            // 
+            this.roundedTextbox3.BackColor = System.Drawing.Color.White;
+            this.roundedTextbox3.BorderColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(94)))), ((int)(((byte)(215)))));
+            this.roundedTextbox3.BorderSize1 = 1;
+            this.roundedTextbox3.IsPlaceholder = false;
+            this.roundedTextbox3.Location = new System.Drawing.Point(164, 186);
+            this.roundedTextbox3.Multiline = false;
+            this.roundedTextbox3.Name = "roundedTextbox3";
+            this.roundedTextbox3.Padding = new System.Windows.Forms.Padding(10, 7, 10, 3);
+            this.roundedTextbox3.PasswordChar = false;
+            this.roundedTextbox3.PlaceholderColor1 = System.Drawing.Color.White;
+            this.roundedTextbox3.PlaceholderText1 = "";
+            this.roundedTextbox3.Size = new System.Drawing.Size(227, 37);
+            this.roundedTextbox3.TabIndex = 5;
+            this.roundedTextbox3.Texts = "";
+            this.roundedTextbox3.UnderLineStyle1 = true;
+            // 
+            // roundedTextbox2
+            // 
+            this.roundedTextbox2.BackColor = System.Drawing.Color.White;
+            this.roundedTextbox2.BorderColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(94)))), ((int)(((byte)(215)))));
+            this.roundedTextbox2.BorderSize1 = 1;
+            this.roundedTextbox2.IsPlaceholder = false;
+            this.roundedTextbox2.Location = new System.Drawing.Point(164, 81);
+            this.roundedTextbox2.Multiline = false;
+            this.roundedTextbox2.Name = "roundedTextbox2";
+            this.roundedTextbox2.Padding = new System.Windows.Forms.Padding(10, 7, 10, 3);
+            this.roundedTextbox2.PasswordChar = false;
+            this.roundedTextbox2.PlaceholderColor1 = System.Drawing.Color.White;
+            this.roundedTextbox2.PlaceholderText1 = "";
+            this.roundedTextbox2.Size = new System.Drawing.Size(227, 37);
+            this.roundedTextbox2.TabIndex = 5;
+            this.roundedTextbox2.Texts = "";
+            this.roundedTextbox2.UnderLineStyle1 = true;
+            // 
+            // roundedTextbox1
+            // 
+            this.roundedTextbox1.BackColor = System.Drawing.Color.White;
+            this.roundedTextbox1.BorderColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(94)))), ((int)(((byte)(215)))));
+            this.roundedTextbox1.BorderSize1 = 1;
+            this.roundedTextbox1.IsPlaceholder = false;
+            this.roundedTextbox1.Location = new System.Drawing.Point(164, 33);
+            this.roundedTextbox1.Multiline = false;
+            this.roundedTextbox1.Name = "roundedTextbox1";
+            this.roundedTextbox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 3);
+            this.roundedTextbox1.PasswordChar = false;
+            this.roundedTextbox1.PlaceholderColor1 = System.Drawing.Color.White;
+            this.roundedTextbox1.PlaceholderText1 = "";
+            this.roundedTextbox1.Size = new System.Drawing.Size(227, 37);
+            this.roundedTextbox1.TabIndex = 5;
+            this.roundedTextbox1.Texts = "";
+            this.roundedTextbox1.UnderLineStyle1 = true;
+            // 
+            // roundedButton1
+            // 
+            this.roundedButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(40)))), ((int)(((byte)(81)))));
+            this.roundedButton1.BorderRadius = 20;
+            this.roundedButton1.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(40)))), ((int)(((byte)(81)))));
+            this.roundedButton1.ButtonText = "Tìm";
+            this.roundedButton1.FlatAppearance.BorderSize = 0;
+            this.roundedButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton1.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundedButton1.HoverButtonColor = System.Drawing.Color.CornflowerBlue;
+            this.roundedButton1.Icon = null;
+            this.roundedButton1.Location = new System.Drawing.Point(276, 422);
+            this.roundedButton1.Name = "roundedButton1";
+            this.roundedButton1.Size = new System.Drawing.Size(96, 32);
+            this.roundedButton1.TabIndex = 12;
+            this.roundedButton1.Text = "Tìm";
+            this.roundedButton1.TextColor = System.Drawing.Color.White;
+            this.roundedButton1.UseVisualStyleBackColor = true;
             // 
             // FormKH
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.roundedButton1);
+            this.Controls.Add(this.roundedButton5);
+            this.Controls.Add(this.roundedTextbox5);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.groupBox1);
             this.Name = "FormKH";
-            this.Size = new System.Drawing.Size(978, 654);
+            this.Size = new System.Drawing.Size(1147, 720);
+            this.Load += new System.EventHandler(this.FormKH_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private Usercontrol_Custome.RoundedButton roundedButton5;
+        private Usercontrol_Custome.RoundedTextbox roundedTextbox5;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private Usercontrol_Custome.RoundedButton Clear_kh;
+        private Usercontrol_Custome.RoundedButton Update_kh;
+        private Usercontrol_Custome.RoundedTextbox roundedTextbox3;
+        private Usercontrol_Custome.RoundedTextbox roundedTextbox2;
+        private Usercontrol_Custome.RoundedTextbox roundedTextbox1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Sex;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Phone;
+        private Usercontrol_Custome.RoundedButton roundedButton1;
     }
 }

@@ -17,35 +17,67 @@ namespace QL_NhaThuoc
             conn.ConnectionString = "Server = MSI; Database = QuanLyThuoc;Integrated Security=True";
             conn.Open();
         }
-        public void LoadDataLNV(SqlConnection conn,DataGridView dataGridView1)
+        public void LoadDataLNV(SqlConnection conn,DataGridView dataGridView1,string sql)
         {
-        
-            string sql = " select MaNV,TenNV,FORMAT(NgaySinh, 'yyyy-MM-dd') AS FormattedDate,GioiTinh,SDT,DIACHI,URL from NHAN_VIEN; ";
-            SqlCommand cmd = new SqlCommand(sql, conn);
-            dataGridView1.Rows.Clear();
-            try
+            if (sql != "")
             {
-                SqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                dataGridView1.Rows.Clear();
+                try
                 {
-                    int rowindex = dataGridView1.Rows.Add();
-                    DataGridViewRow row = dataGridView1.Rows[rowindex];
-                    row.Cells["Column_ID"].Value = reader["MaNV"];
-                    row.Cells["Column_Name"].Value = reader["TenNV"];
-                    row.Cells["Column_BDate"].Value = reader["FormattedDate"];
-                    row.Cells["Column_Sex"].Value = reader["GioiTinh"];
-                    row.Cells["Column_Phone"].Value = reader["SDT"];
-                    row.Cells["Column_Loc"].Value = reader["DIACHI"];
-                    row.Cells["Column_URL"].Value = reader["URL"];
-                 
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        int rowindex = dataGridView1.Rows.Add();
+                        DataGridViewRow row = dataGridView1.Rows[rowindex];
+                        row.Cells["Column_ID"].Value = reader["MaNV"];
+                        row.Cells["Column_Name"].Value = reader["TenNV"];
+                        row.Cells["Column_BDate"].Value = reader["FormattedDate"];
+                        row.Cells["Column_Sex"].Value = reader["GioiTinh"];
+                        row.Cells["Column_Phone"].Value = reader["SDT"];
+                        row.Cells["Column_Loc"].Value = reader["DIACHI"];
+                        row.Cells["Column_URL"].Value = reader["URL"];
 
+
+                    }
+                    reader.Close();
                 }
-                reader.Close();
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                sql = " select MaNV,TenNV,FORMAT(NgaySinh, 'yyyy-MM-dd') AS FormattedDate,GioiTinh,SDT,DIACHI,URL from NHAN_VIEN; ";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                dataGridView1.Rows.Clear();
+                try
+                {
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        int rowindex = dataGridView1.Rows.Add();
+                        DataGridViewRow row = dataGridView1.Rows[rowindex];
+                        row.Cells["Column_ID"].Value = reader["MaNV"];
+                        row.Cells["Column_Name"].Value = reader["TenNV"];
+                        row.Cells["Column_BDate"].Value = reader["FormattedDate"];
+                        row.Cells["Column_Sex"].Value = reader["GioiTinh"];
+                        row.Cells["Column_Phone"].Value = reader["SDT"];
+                        row.Cells["Column_Loc"].Value = reader["DIACHI"];
+                        row.Cells["Column_URL"].Value = reader["URL"];
+
+
+                    }
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
+
+           
         }
 
 

@@ -52,7 +52,7 @@
             this.textBoxSoluong = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.buttonLHD = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.roundedTextbox5 = new QL_NhaThuoc.Usercontrol_Custome.RoundedTextbox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewToathuoc)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -61,12 +61,13 @@
             // listView1
             // 
             this.listView1.BackColor = System.Drawing.Color.White;
+            this.listView1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.FullRowSelect = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(48, 53);
+            this.listView1.Location = new System.Drawing.Point(22, 46);
             this.listView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(369, 366);
+            this.listView1.Size = new System.Drawing.Size(395, 373);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
@@ -312,11 +313,11 @@
             this.groupBox2.Controls.Add(this.buttonDatlai);
             this.groupBox2.Controls.Add(this.buttonThem);
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(48, 452);
+            this.groupBox2.Location = new System.Drawing.Point(22, 452);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(1060, 136);
+            this.groupBox2.Size = new System.Drawing.Size(1086, 136);
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin thuốc";
@@ -360,24 +361,32 @@
             this.buttonLHD.UseVisualStyleBackColor = false;
             this.buttonLHD.Click += new System.EventHandler(this.buttonLHD_Click);
             // 
-            // textBox1
+            // roundedTextbox5
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(48, 11);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(369, 38);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.roundedTextbox5.BackColor = System.Drawing.Color.White;
+            this.roundedTextbox5.BorderColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(94)))), ((int)(((byte)(215)))));
+            this.roundedTextbox5.BorderSize1 = 1;
+            this.roundedTextbox5.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundedTextbox5.IsPlaceholder = true;
+            this.roundedTextbox5.Location = new System.Drawing.Point(22, 11);
+            this.roundedTextbox5.Multiline = false;
+            this.roundedTextbox5.Name = "roundedTextbox5";
+            this.roundedTextbox5.Padding = new System.Windows.Forms.Padding(10, 7, 10, 3);
+            this.roundedTextbox5.PasswordChar = false;
+            this.roundedTextbox5.PlaceholderColor1 = System.Drawing.Color.Black;
+            this.roundedTextbox5.PlaceholderText1 = "Tìm kiếm";
+            this.roundedTextbox5.Size = new System.Drawing.Size(395, 30);
+            this.roundedTextbox5.TabIndex = 14;
+            this.roundedTextbox5.Texts = "";
+            this.roundedTextbox5.UnderLineStyle1 = true;
             // 
             // FormToathuoc
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.roundedTextbox5);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.listView1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormToathuoc";
@@ -388,7 +397,6 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -417,6 +425,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn lieuluong;
         private System.Windows.Forms.DataGridViewTextBoxColumn dongia;
         private System.Windows.Forms.DataGridViewTextBoxColumn thanhtien;
-        private System.Windows.Forms.TextBox textBox1;
+        private Usercontrol_Custome.RoundedTextbox roundedTextbox5;
     }
 }

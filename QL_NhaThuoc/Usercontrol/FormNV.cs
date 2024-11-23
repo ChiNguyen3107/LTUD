@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,17 +16,51 @@ namespace QL_NhaThuoc.Usercontrol
     {
         Phong fn = new Phong();
         SqlConnection conn = new SqlConnection();
+        public string path = AppDomain.CurrentDomain.BaseDirectory;
         public FormNV()
         {
             InitializeComponent();
+            this.VisibleChanged += MyUsercontrol_VisibleChanged;
+
+        }
+
+        private void MyUsercontrol_VisibleChanged(object sender, EventArgs e)
+        {
+            if (this.Visible)
+            {
+                this.FormNV_Load(sender, e);
+            }
         }
 
         private void FormNV_Load(object sender, EventArgs e)
         {
+            roundedTextbox3._KeyPress += RoundedTextbox3_KeyPress;
+            roundedTextbox5._KeyPress += RoundedTextbox5_KeyPress;
             fn.connection(conn);
             roundedTextbox1.Enabled = false;
-            fn.LoadDataLNV(conn, dataGridView1);
+            fn.LoadDataLNV(conn, dataGridView1,"");
             conn.Close();
+            dataGridView1.ClearSelection();
+            dataGridView1.CurrentCell = null;
+        }
+
+        private void RoundedTextbox5_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            fn.connection(conn);
+
+            string s = roundedTextbox5.Texts;
+            fn.LoadDataLNV(conn, dataGridView1, "select MaNV,TenNV,FORMAT(NgaySinh, 'yyyy-MM-dd') AS FormattedDate,GioiTinh,SDT,DIACHI,URL from NHAN_VIEN where TenNV like N'%" + s + "%' or sdt like '%"+s+"%'; ");
+            conn.Close();
+
+        }
+
+        private void RoundedTextbox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Ví dụ: Chỉ cho phép nhập số
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true; // Ngăn nhập ký tự không phải số
+            }
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -43,8 +78,9 @@ namespace QL_NhaThuoc.Usercontrol
                 {
                     comboBox1.SelectedItem = row.Cells["Column_Sex"].Value.ToString();
                 }
-                string file = row.Cells["Column_URL"].Value.ToString();
-                if(file != "")
+                string path = row.Cells["Column_URL"].Value.ToString();
+                string file = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, path);
+                if (path != "")
                 {
                     if (pictureBox1.Image != null)
                     {
@@ -89,7 +125,7 @@ namespace QL_NhaThuoc.Usercontrol
                 MessageBox.Show("Đã cập nhật thông tin nhân viên thành công!");
                 
             }
-            fn.LoadDataLNV(conn, dataGridView1);
+            fn.LoadDataLNV(conn, dataGridView1,"");
             conn.Close();
         }
 
@@ -123,36 +159,61 @@ namespace QL_NhaThuoc.Usercontrol
                 MessageBox.Show("Thêm nhân viên mới thành công");
 
             }
-            fn.LoadDataLNV(conn, dataGridView1);
+            fn.LoadDataLNV(conn, dataGridView1,"");
             conn.Close();
         }
 
-        private void Load_btn_Click(object sender, EventArgs e)
+        public void Load_btn_Click(object sender, EventArgs e)
         {
-            string file = "";
-            OpenFileDialog openFileDialog = new OpenFileDialog
+            if (roundedTextbox1.Texts != "")
             {
-                Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp;*.gif", // Lọc định dạng ảnh
-                Title = "Chọn ảnh"
-            };
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                if (pictureBox1.Image != null)
+                string file = "";
+                OpenFileDialog openFileDialog = new OpenFileDialog
                 {
-                    pictureBox1.Image.Dispose();
-                    pictureBox1.Image = null;
-                    file = openFileDialog.FileName;
-                    pictureBox1.Image = Image.FromFile(file);
-                    pictureBox1.Tag = file; // Lưu đường dẫn vào thuộc tính Tag
+                    Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp;*.gif", // Lọc định dạng ảnh
+                    Title = "Chọn ảnh"
+                };
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    if (pictureBox1.Image != null)
+                    {
+                        pictureBox1.Image.Dispose();
+                        pictureBox1.Image = null;
+                        file = openFileDialog.FileName;
+                        pictureBox1.Image = Image.FromFile(file);
+                        pictureBox1.Tag = file; // Lưu đường dẫn vào thuộc tính Tag
 
+                    }
+                    file = openFileDialog.FileName;
+                    string imagesFolder = Path.Combine(path, "Image");
+                    pictureBox1.Image = Image.FromFile(file);
+                    // 
+                    string targetPath = Path.Combine(imagesFolder, roundedTextbox1.Texts + ".jpg");
+                    try
+                    {
+                        // Kiểm tra nếu thư mục đích không tồn tại thì tạo mới
+                        if (!Directory.Exists(imagesFolder))
+                        {
+                            Directory.CreateDirectory(imagesFolder);
+                        }
+
+                        // Sao chép tệp và đổi tên
+                        File.Copy(file, targetPath, true); // `true` để thay thế nếu tệp đã tồn tại
+                        MessageBox.Show($"Đã đổi ảnh thành công");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Lỗi khi sao chép và đổi tên ảnh: " + ex.Message);
+                    }
+                    pictureBox1.Tag = @"Image\" + roundedTextbox1.Texts + ".jpg";
                 }
-                file = openFileDialog.FileName;
-                pictureBox1.Image = Image.FromFile(file);
-                pictureBox1.Tag = file; // 
 
             }
-     
-            
+            else
+            {
+                MessageBox.Show("Vui lòng chọn nhân viên trước!!!!!!");
+            }
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -171,8 +232,25 @@ namespace QL_NhaThuoc.Usercontrol
             {
                 MessageBox.Show("Đã xóa nhân viên!!!!!!");
             }
-            fn.LoadDataLNV(conn, dataGridView1);
+            fn.LoadDataLNV(conn, dataGridView1,"");
             conn.Close();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+     
+
+        private void roundedButton1_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void dataGridView1_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
         }
     }
 }

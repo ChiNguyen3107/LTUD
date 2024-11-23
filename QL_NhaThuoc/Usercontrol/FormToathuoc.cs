@@ -38,7 +38,7 @@ namespace QL_NhaThuoc
         }
 
 
-        private void LoadDataToListView()
+        private void LoadDataToListView(string query)
         {
             listView1.Items.Clear(); // Xóa dữ liệu cũ trong ListView
 
@@ -49,31 +49,61 @@ namespace QL_NhaThuoc
             listView1.Columns.Add("Tên Thuốc", 150);
             listView1.Columns.Add("Đơn Giá", 100);
             listView1.Columns.Add("Đơn Vị", 100);
-
-            try
+            if (query == "")
             {
-                using (SqlConnection conn = db.ketnoi())
+                try
                 {
-                    string query = "SELECT MATHUOC, TENTHUOC, DONGIA, DONVI FROM THUOC";
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    SqlDataReader reader = cmd.ExecuteReader();
-
-                    while (reader.Read())
+                    using (SqlConnection conn = db.ketnoi())
                     {
-                        ListViewItem item = new ListViewItem(reader["MATHUOC"].ToString());
-                        item.SubItems.Add(reader["TENTHUOC"].ToString());
-                        item.SubItems.Add(reader["DONGIA"].ToString());
-                        item.SubItems.Add(reader["DONVI"].ToString());
+                        query = "SELECT MATHUOC, TENTHUOC, DONGIA, DONVI FROM THUOC";
+                        SqlCommand cmd = new SqlCommand(query, conn);
+                        SqlDataReader reader = cmd.ExecuteReader();
 
-                        listView1.Items.Add(item);
+                        while (reader.Read())
+                        {
+                            ListViewItem item = new ListViewItem(reader["MATHUOC"].ToString());
+                            item.SubItems.Add(reader["TENTHUOC"].ToString());
+                            item.SubItems.Add(reader["DONGIA"].ToString());
+                            item.SubItems.Add(reader["DONVI"].ToString());
+
+                            listView1.Items.Add(item);
+                        }
+                        reader.Close();
                     }
-                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi khi tải dữ liệu: " + ex.Message);
                 }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Lỗi khi tải dữ liệu: " + ex.Message);
+                try
+                {
+                    using (SqlConnection conn = db.ketnoi())
+                    {
+                        
+                        SqlCommand cmd = new SqlCommand(query, conn);
+                        SqlDataReader reader = cmd.ExecuteReader();
+
+                        while (reader.Read())
+                        {
+                            ListViewItem item = new ListViewItem(reader["MATHUOC"].ToString());
+                            item.SubItems.Add(reader["TENTHUOC"].ToString());
+                            item.SubItems.Add(reader["DONGIA"].ToString());
+                            item.SubItems.Add(reader["DONVI"].ToString());
+
+                            listView1.Items.Add(item);
+                        }
+                        reader.Close();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi khi tải dữ liệu: " + ex.Message);
+                }
             }
+           
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -264,7 +294,14 @@ namespace QL_NhaThuoc
 
         private void FormToathuoc_Load(object sender, EventArgs e)
         {
-            LoadDataToListView();
+            LoadDataToListView("");
+            roundedTextbox5._KeyPress += RoundedTextbox5__KeyPress;
+        }
+
+        private void RoundedTextbox5__KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string s = roundedTextbox5.Texts;
+            LoadDataToListView("SELECT MATHUOC, TENTHUOC, DONGIA, DONVI FROM THUOC where tenthuoc like '%"+s+"%'");
         }
     }
 }

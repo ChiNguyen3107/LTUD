@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -39,6 +39,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Load_btn = new QL_NhaThuoc.Usercontrol_Custome.RoundedButton();
+            this.Clear_Btn = new QL_NhaThuoc.Usercontrol_Custome.RoundedButton();
+            this.Update = new QL_NhaThuoc.Usercontrol_Custome.RoundedButton();
+            this.roundedTextbox4 = new QL_NhaThuoc.Usercontrol_Custome.RoundedTextbox();
+            this.roundedTextbox3 = new QL_NhaThuoc.Usercontrol_Custome.RoundedTextbox();
+            this.roundedTextbox2 = new QL_NhaThuoc.Usercontrol_Custome.RoundedTextbox();
+            this.roundedTextbox1 = new QL_NhaThuoc.Usercontrol_Custome.RoundedTextbox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,13 +56,6 @@
             this.Column_URL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.roundedButton5 = new QL_NhaThuoc.Usercontrol_Custome.RoundedButton();
             this.Add_btn = new QL_NhaThuoc.Usercontrol_Custome.RoundedButton();
-            this.Load_btn = new QL_NhaThuoc.Usercontrol_Custome.RoundedButton();
-            this.Clear_Btn = new QL_NhaThuoc.Usercontrol_Custome.RoundedButton();
-            this.Update = new QL_NhaThuoc.Usercontrol_Custome.RoundedButton();
-            this.roundedTextbox4 = new QL_NhaThuoc.Usercontrol_Custome.RoundedTextbox();
-            this.roundedTextbox3 = new QL_NhaThuoc.Usercontrol_Custome.RoundedTextbox();
-            this.roundedTextbox2 = new QL_NhaThuoc.Usercontrol_Custome.RoundedTextbox();
-            this.roundedTextbox1 = new QL_NhaThuoc.Usercontrol_Custome.RoundedTextbox();
             this.roundedTextbox5 = new QL_NhaThuoc.Usercontrol_Custome.RoundedTextbox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -181,128 +181,7 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin nhân viên";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(81)))), ((int)(((byte)(162)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(81)))), ((int)(((byte)(162)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column_ID,
-            this.Column_Name,
-            this.Column_BDate,
-            this.Column_Sex,
-            this.Column_Phone,
-            this.Column_Loc,
-            this.Column_URL});
-            this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(29, 469);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
-            this.dataGridView1.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView1.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-            this.dataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(112)))), ((int)(((byte)(229)))));
-            this.dataGridView1.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1084, 234);
-            this.dataGridView1.TabIndex = 3;
-            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
-            // 
-            // Column_ID
-            // 
-            this.Column_ID.HeaderText = "Mã nhân viên";
-            this.Column_ID.MinimumWidth = 6;
-            this.Column_ID.Name = "Column_ID";
-            // 
-            // Column_Name
-            // 
-            this.Column_Name.HeaderText = "Tên nhân viên";
-            this.Column_Name.MinimumWidth = 6;
-            this.Column_Name.Name = "Column_Name";
-            // 
-            // Column_BDate
-            // 
-            this.Column_BDate.HeaderText = "Ngày sinh";
-            this.Column_BDate.MinimumWidth = 6;
-            this.Column_BDate.Name = "Column_BDate";
-            // 
-            // Column_Sex
-            // 
-            this.Column_Sex.HeaderText = "Giới tính";
-            this.Column_Sex.MinimumWidth = 6;
-            this.Column_Sex.Name = "Column_Sex";
-            // 
-            // Column_Phone
-            // 
-            this.Column_Phone.HeaderText = "SĐT";
-            this.Column_Phone.MinimumWidth = 6;
-            this.Column_Phone.Name = "Column_Phone";
-            // 
-            // Column_Loc
-            // 
-            this.Column_Loc.HeaderText = "Địa chỉ";
-            this.Column_Loc.MinimumWidth = 6;
-            this.Column_Loc.Name = "Column_Loc";
-            // 
-            // Column_URL
-            // 
-            this.Column_URL.HeaderText = "URL";
-            this.Column_URL.MinimumWidth = 6;
-            this.Column_URL.Name = "Column_URL";
-            this.Column_URL.Visible = false;
-            // 
-            // roundedButton5
-            // 
-            this.roundedButton5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(40)))), ((int)(((byte)(81)))));
-            this.roundedButton5.BorderRadius = 20;
-            this.roundedButton5.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(40)))), ((int)(((byte)(81)))));
-            this.roundedButton5.ButtonText = "Xóa nhân viên";
-            this.roundedButton5.FlatAppearance.BorderSize = 0;
-            this.roundedButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton5.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundedButton5.HoverButtonColor = System.Drawing.Color.CornflowerBlue;
-            this.roundedButton5.Icon = null;
-            this.roundedButton5.Location = new System.Drawing.Point(962, 420);
-            this.roundedButton5.Name = "roundedButton5";
-            this.roundedButton5.Size = new System.Drawing.Size(151, 32);
-            this.roundedButton5.TabIndex = 7;
-            this.roundedButton5.TextColor = System.Drawing.Color.White;
-            this.roundedButton5.UseVisualStyleBackColor = true;
-            this.roundedButton5.Click += new System.EventHandler(this.roundedButton5_Click);
-            // 
-            // Add_btn
-            // 
-            this.Add_btn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(40)))), ((int)(((byte)(81)))));
-            this.Add_btn.BorderRadius = 20;
-            this.Add_btn.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(40)))), ((int)(((byte)(81)))));
-            this.Add_btn.ButtonText = "Thêm nhân viên";
-            this.Add_btn.FlatAppearance.BorderSize = 0;
-            this.Add_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Add_btn.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Add_btn.HoverButtonColor = System.Drawing.Color.CornflowerBlue;
-            this.Add_btn.Icon = null;
-            this.Add_btn.Location = new System.Drawing.Point(792, 420);
-            this.Add_btn.Name = "Add_btn";
-            this.Add_btn.Size = new System.Drawing.Size(151, 32);
-            this.Add_btn.TabIndex = 7;
-            this.Add_btn.TextColor = System.Drawing.Color.White;
-            this.Add_btn.UseVisualStyleBackColor = true;
-            this.Add_btn.Click += new System.EventHandler(this.Add_btn_click);
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // Load_btn
             // 
@@ -432,6 +311,129 @@
             this.roundedTextbox1.TabIndex = 5;
             this.roundedTextbox1.Texts = "";
             this.roundedTextbox1.UnderLineStyle1 = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(81)))), ((int)(((byte)(162)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(81)))), ((int)(((byte)(162)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column_ID,
+            this.Column_Name,
+            this.Column_BDate,
+            this.Column_Sex,
+            this.Column_Phone,
+            this.Column_Loc,
+            this.Column_URL});
+            this.dataGridView1.EnableHeadersVisualStyles = false;
+            this.dataGridView1.Location = new System.Drawing.Point(29, 469);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
+            this.dataGridView1.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView1.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.dataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(112)))), ((int)(((byte)(229)))));
+            this.dataGridView1.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(1084, 234);
+            this.dataGridView1.TabIndex = 3;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            this.dataGridView1.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEnter);
+            // 
+            // Column_ID
+            // 
+            this.Column_ID.HeaderText = "Mã nhân viên";
+            this.Column_ID.MinimumWidth = 6;
+            this.Column_ID.Name = "Column_ID";
+            // 
+            // Column_Name
+            // 
+            this.Column_Name.HeaderText = "Tên nhân viên";
+            this.Column_Name.MinimumWidth = 6;
+            this.Column_Name.Name = "Column_Name";
+            // 
+            // Column_BDate
+            // 
+            this.Column_BDate.HeaderText = "Ngày sinh";
+            this.Column_BDate.MinimumWidth = 6;
+            this.Column_BDate.Name = "Column_BDate";
+            // 
+            // Column_Sex
+            // 
+            this.Column_Sex.HeaderText = "Giới tính";
+            this.Column_Sex.MinimumWidth = 6;
+            this.Column_Sex.Name = "Column_Sex";
+            // 
+            // Column_Phone
+            // 
+            this.Column_Phone.HeaderText = "SĐT";
+            this.Column_Phone.MinimumWidth = 6;
+            this.Column_Phone.Name = "Column_Phone";
+            // 
+            // Column_Loc
+            // 
+            this.Column_Loc.HeaderText = "Địa chỉ";
+            this.Column_Loc.MinimumWidth = 6;
+            this.Column_Loc.Name = "Column_Loc";
+            // 
+            // Column_URL
+            // 
+            this.Column_URL.HeaderText = "URL";
+            this.Column_URL.MinimumWidth = 6;
+            this.Column_URL.Name = "Column_URL";
+            this.Column_URL.Visible = false;
+            // 
+            // roundedButton5
+            // 
+            this.roundedButton5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(40)))), ((int)(((byte)(81)))));
+            this.roundedButton5.BorderRadius = 20;
+            this.roundedButton5.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(40)))), ((int)(((byte)(81)))));
+            this.roundedButton5.ButtonText = "Xóa nhân viên";
+            this.roundedButton5.FlatAppearance.BorderSize = 0;
+            this.roundedButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton5.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundedButton5.HoverButtonColor = System.Drawing.Color.CornflowerBlue;
+            this.roundedButton5.Icon = null;
+            this.roundedButton5.Location = new System.Drawing.Point(962, 420);
+            this.roundedButton5.Name = "roundedButton5";
+            this.roundedButton5.Size = new System.Drawing.Size(151, 32);
+            this.roundedButton5.TabIndex = 7;
+            this.roundedButton5.TextColor = System.Drawing.Color.White;
+            this.roundedButton5.UseVisualStyleBackColor = true;
+            this.roundedButton5.Click += new System.EventHandler(this.roundedButton5_Click);
+            // 
+            // Add_btn
+            // 
+            this.Add_btn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(40)))), ((int)(((byte)(81)))));
+            this.Add_btn.BorderRadius = 20;
+            this.Add_btn.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(40)))), ((int)(((byte)(81)))));
+            this.Add_btn.ButtonText = "Thêm nhân viên";
+            this.Add_btn.FlatAppearance.BorderSize = 0;
+            this.Add_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Add_btn.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Add_btn.HoverButtonColor = System.Drawing.Color.CornflowerBlue;
+            this.Add_btn.Icon = null;
+            this.Add_btn.Location = new System.Drawing.Point(792, 420);
+            this.Add_btn.Name = "Add_btn";
+            this.Add_btn.Size = new System.Drawing.Size(151, 32);
+            this.Add_btn.TabIndex = 7;
+            this.Add_btn.TextColor = System.Drawing.Color.White;
+            this.Add_btn.UseVisualStyleBackColor = true;
+            this.Add_btn.Click += new System.EventHandler(this.Add_btn_click);
             // 
             // roundedTextbox5
             // 
